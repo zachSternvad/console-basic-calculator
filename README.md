@@ -8,10 +8,6 @@ This repository contains the code for a simple Console Calculator. Takes two num
 
 * C#
 
-**Key Features:**
-
-* [List 1-3 key functionalities or features of this project.]
-
 **Learning Objectives:**
 
 * Learn how to make a C# console application
