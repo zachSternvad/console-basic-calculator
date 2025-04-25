@@ -35,9 +35,16 @@ namespace console_basic_calculator
                 case "2":
                     Console.WriteLine($"Your result is: {num1} - {num2} = " + (num1 - num2));
                     break;
+                case "3":
+                    Console.WriteLine($"Your result is: {num1} * {num2} = " + (num1 * num2));
+                    break;
+                case "4":
+                    Console.WriteLine($"Your result is: {num1} / {num2} = " + (num1 / num2));
+                    break;
+                default:
+                    Environment.Exit(0);
+                    break;
             }
-            // Print out result
-
         }
     }
 }
