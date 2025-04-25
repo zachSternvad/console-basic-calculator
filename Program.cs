@@ -17,7 +17,7 @@ namespace console_basic_calculator
             Console.WriteLine("\n3.Multiplication");
             Console.WriteLine("\n4.Division");
             Console.WriteLine("\n5.Exit");
-            Console.Write("Your option: ");
+            Console.Write("\nYour option: ");
 
             // User input choice
             string option = Console.ReadLine();
@@ -25,43 +25,86 @@ namespace console_basic_calculator
             // Variables
             int num1, num2;
 
-            // Formula
-            switch (Console.ReadLine())
+            // Switch case for the formula
+            switch (option) // Use the 'option' variable here
             {
                 case "1":
-                    Console.WriteLine("Enter the first number: ");
-                    int num1 = Convert.ToInt32(Console.ReadLine());
-
-                    Console.WriteLine("Enter the second number: ");
-                    int num2 = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine($"Your result is: {num1} + {num2} = " + (num1 + num2));
+                    Console.Write("Enter the first number: ");
+                    if (!int.TryParse(Console.ReadLine(), out num1))
+                    {
+                        Console.WriteLine("Invalid input. Please enter a valid number.");
+                        return;
+                    }
+                    Console.Write("Enter the second number: ");
+                    if (!int.TryParse(Console.ReadLine(), out num2))
+                    {
+                        Console.WriteLine("Invalid input. Please enter a valid number.");
+                        return;
+                    }
+                    Console.WriteLine($"Your result is: {num1} + {num2} = {num1 + num2}");
                     break;
+
                 case "2":
-                    Console.WriteLine("Enter the first number: ");
-                    int num1 = Convert.ToInt32(Console.ReadLine());
-
-                    Console.WriteLine("Enter the second number: ");
-                    int num2 = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine($"Your result is: {num1} - {num2} = " + (num1 - num2));
+                    Console.Write("Enter the first number: ");
+                    if (!int.TryParse(Console.ReadLine(), out num1))
+                    {
+                        Console.WriteLine("Invalid input. Please enter a valid number.");
+                        return;
+                    }
+                    Console.Write("Enter the second number: ");
+                    if (!int.TryParse(Console.ReadLine(), out num2))
+                    {
+                        Console.WriteLine("Invalid input. Please enter a valid number.");
+                        return;
+                    }
+                    Console.WriteLine($"Your result is: {num1} - {num2} = {num1 - num2}");
                     break;
+
                 case "3":
-                    Console.WriteLine("Enter the first number: ");
-                    int num1 = Convert.ToInt32(Console.ReadLine());
-
-                    Console.WriteLine("Enter the second number: ");
-                    int num2 = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine($"Your result is: {num1} * {num2} = " + (num1 * num2));
+                    Console.Write("Enter the first number: ");
+                    if (!int.TryParse(Console.ReadLine(), out num1))
+                    {
+                        Console.WriteLine("Invalid input. Please enter a valid number.");
+                        return;
+                    }
+                    Console.Write("Enter the second number: ");
+                    if (!int.TryParse(Console.ReadLine(), out num2))
+                    {
+                        Console.WriteLine("Invalid input. Please enter a valid number.");
+                        return;
+                    }
+                    Console.WriteLine($"Your result is: {num1} * {num2} = {num1 * num2}");
                     break;
+
                 case "4":
-                    Console.WriteLine("Enter the first number: ");
-                    int num1 = Convert.ToInt32(Console.ReadLine());
-
-                    Console.WriteLine("Enter the second number: ");
-                    int num2 = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine($"Your result is: {num1} / {num2} = " + (num1 / num2));
+                    Console.Write("Enter the first number: ");
+                    if (!int.TryParse(Console.ReadLine(), out num1))
+                    {
+                        Console.WriteLine("Invalid input. Please enter a valid number.");
+                        return;
+                    }
+                    Console.Write("Enter the second number: ");
+                    if (!int.TryParse(Console.ReadLine(), out num2))
+                    {
+                        Console.WriteLine("Invalid input. Please enter a valid number.");
+                        return;
+                    }
+                    if (num2 == 0)
+                    {
+                        Console.WriteLine("Error: Cannot divide by zero.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Your result is: {num1} / {num2} = {(double)num1 / num2}");
+                    }
                     break;
-                default:
+
+                case "5":
                     Environment.Exit(0);
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid option! Select from the menu");
                     break;
             }
         }
