@@ -13,7 +13,7 @@ This repository contains the code for a simple Console Calculator. Takes two num
 * Learn how to make a C# console application
 * Learn how to handle operators in C#
 
-**How to Run (if applicable):**
+**How to Run:**
 
 * Clone and run locally
 
